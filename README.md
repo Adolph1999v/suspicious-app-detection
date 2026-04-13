@@ -94,10 +94,12 @@ This improves transparency and usability.
 
 ## Request Input Example
 
-<img width="617" height="136" alt="Screenshot 2026-04-13 at 10 13 42 pm" src="https://github.com/user-attachments/assets/86ad49d0-667f-4e0c-9e60-81d51362aa98" />
+<img width="709" height="129" alt="Screenshot 2026-04-13 at 10 30 04 pm" src="https://github.com/user-attachments/assets/0f993711-5ae4-4c78-a8f2-df1e5695099e" />
+
 
 ## Request Output Example
 
-<img width="755" height="197" alt="Screenshot 2026-04-13 at 10 14 49 pm" src="https://github.com/user-attachments/assets/021c25c7-c6d8-4eda-a36c-7ffe0b5ec6d6" />
+<img width="881" height="182" alt="Screenshot 2026-04-13 at 10 28 40 pm" src="https://github.com/user-attachments/assets/bffa25f7-58c0-436c-9661-f71613cc035a" />
+
 
 
