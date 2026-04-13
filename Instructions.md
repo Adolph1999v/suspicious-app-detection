@@ -1,8 +1,7 @@
 
----
-## How to Run the App Detection API 
+# How to Run the App Detection API
 
-This guide will help you run the project even if you are not from a technical background.
+This guide explains how to set up and run the Suspicious App Detection API on your local machine.
 
 ---
 
@@ -11,42 +10,68 @@ This guide will help you run the project even if you are not from a technical ba
 1. Go to: https://www.python.org/downloads/
 2. Download and install Python (version 3.9 or higher)
 3. During installation, make sure to check:
-    "Add Python to PATH"
+   **"Add Python to PATH"**
 
 ---
 
-##  Step 2: Install Required Packages
+## Step 2: Install Required Packages
 
-Open Terminal / Command Prompt and run: pip install fastapi uvicorn
+Open Terminal (Mac/Linux) or Command Prompt (Windows) and run:
+
+```bash
+pip install fastapi uvicorn pydantic
+```
+
+### Package Details
+
+* **fastapi** → Backend framework used to build the API
+* **uvicorn** → ASGI server used to run the application
+* **pydantic** → Data validation and request parsing
 
 
 ---
 
-## Step 3: Create a Project folder and downlaod the main.py file from this GitHub repository
+## Step 3: Set Up the Project
 
-Open the `main.py` in Visual Studio Code or any preferred IDE of your choice
-
-Open terminal within the IDE platform and run the command : uvicorn main:app --reload
-
-You should see something like: Uvicorn running on http://127.0.0.1:8000
-
+1. Create a new project folder
+2. Download the `main.py` file from this repository
+3. Open the folder in Visual Studio Code (or any IDE)
 
 ---
 
-## 🌐 Step 4: Open the API in Browser
+## Step 4: Run the Server
 
-Go to: http://127.0.0.1:8000/docs
+Open the terminal inside your IDE and run the command:
 
+```bash
+uvicorn main:app --reload
+```
 
-This opens a user-friendly interface.
+You should see output similar to:
+
+```
+Uvicorn running on http://127.0.0.1:8000
+```
 
 ---
 
-## 🧪 Step 7: Test the API
+## Step 5: Open the API Interface
 
-1. Click on **POST /analyze-apps**
+Open your browser and go to:
+
+```
+http://127.0.0.1:8000/docs
+```
+
+This will open FastAPI’s interactive API documentation, where you can test the endpoints.
+
+---
+
+## Step 6: Test the API
+
+1. Locate **POST /analyze-apps**
 2. Click **"Try it out"**
-3. Paste this example:
+3. Paste the example request below:
 
 ```json
 {
@@ -57,6 +82,12 @@ This opens a user-friendly interface.
     }
   ]
 }
+```
 
-Click Execute
+4. Click **Execute**
+
+You will receive a response containing the risk score, level, and explanation for the app.
+
+---
+
 
