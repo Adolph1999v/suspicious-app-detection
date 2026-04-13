@@ -5,7 +5,7 @@ This guide explains how to set up and run the Suspicious App Detection API on yo
 
 ---
 
-## Step 1: Install Python
+## Step 1: Install Python (If not installed already)
 
 1. Go to: https://www.python.org/downloads/
 2. Download and install Python (version 3.9 or higher)
@@ -14,7 +14,7 @@ This guide explains how to set up and run the Suspicious App Detection API on yo
 
 ---
 
-## Step 2: Install Required Packages
+## Step 2: Install Required Packages (If not installed already)
 
 Open Terminal (Mac/Linux) or Command Prompt (Windows) and run:
 
