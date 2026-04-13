@@ -1,2 +1,103 @@
-# suspicious-app-detection
-Build a Suspicious App Detection API with Risk Scoring
+
+# Suspicious App Detection API with Risk Scoring
+
+## 📌 Overview
+This project is a Python-based backend API that analyzes mobile applications and detects potentially suspicious behavior based on the permissions they request.
+
+The system evaluates each app and assigns:
+- A **risk score (0–10)**
+- A **risk level (LOW / MEDIUM / HIGH)**
+- A **suspicious flag (true/false)**
+- A **human-readable explanation**
+
+---
+
+## 🎯 Problem Statement
+Mobile applications often request permissions that may not align with their intended functionality. This system identifies such mismatches and flags potentially suspicious apps.
+
+---
+
+## ⚙️ Tech Stack
+- Python
+- FastAPI
+- Pydantic
+
+---
+
+## 🧠 How It Works
+
+### 1. App Category Detection
+The system infers the app type (e.g., calculator, calendar, communication) based on its name using keyword matching.
+
+*Why?*  
+Different app types are expected to use different permissions.
+
+---
+
+### 2. Permission Analysis
+
+The system evaluates permissions using three checks:
+
+#### ✅ Expected Permissions
+Each app category has a predefined set of expected permissions.
+
+If permissions match expectations → **No risk added**
+
+---
+
+#### ⚠️ Unexpected Permissions
+Permissions not typically required for that app type.
+
+Adds moderate risk: +1.5 per unexpected permission
+
+---
+
+#### 🚨 Dangerous Permissions
+High-risk permissions such as:
+- READ_CONTACTS
+- SEND_SMS
+- RECORD_AUDIO
+
+Adds high risk: +2 per dangerous permission (only if unexpected)
+
+
+---
+
+#### Excessive Permissions
+Apps requesting too many permissions (>5)
+
+Adds small risk: +1
+
+
+---
+
+### 3. Risk Classification
+
+| Score | Level |
+|------|------|
+| 0 – 3 | LOW |
+| 4 – 6 | MEDIUM |
+| 7 – 10 | HIGH |
+
+---
+
+### 4. Explanation Generation
+Each result includes a clear explanation describing why the app was flagged as suspicious.
+
+This improves transparency and usability.
+
+---
+
+## API Endpoint
+
+---
+
+## Request Input Example
+
+<img width="617" height="136" alt="Screenshot 2026-04-13 at 10 13 42 pm" src="https://github.com/user-attachments/assets/86ad49d0-667f-4e0c-9e60-81d51362aa98" />
+
+## Request Output Example
+
+<img width="755" height="197" alt="Screenshot 2026-04-13 at 10 14 49 pm" src="https://github.com/user-attachments/assets/021c25c7-c6d8-4eda-a36c-7ffe0b5ec6d6" />
+
+
