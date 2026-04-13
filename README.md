@@ -101,5 +101,13 @@ This improves transparency and usability.
 
 <img width="881" height="182" alt="Screenshot 2026-04-13 at 10 28 40 pm" src="https://github.com/user-attachments/assets/bffa25f7-58c0-436c-9661-f71613cc035a" />
 
+## Design Decisions
+- Rule-based scoring for simplicity and explainability  
+- Set operations to easily check which permissions are normal and which are unusual
+- Only flag apps when they do something unusual or risky, to avoid unnecessary warnings 
 
-
+## Future Improvements
+- Add ML and DL based anomaly detection  
+- Use real-world app datasets for better predictions 
+- Improve category detection using fuzzy matching or NLP to handle typos and better understand app names
+- Add logging, monitoring, and deployment support  
